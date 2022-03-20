@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <!-- Roles Controller --> 
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Basic Tables</li>
+    </ol>
+    <h6 class="slim-pagetitle">Basic Tables</h6>
+</div><!-- slim-pageheader -->
+
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Role Id</th>
+                    <td>Role Name</td>
+                    <td>Role Description</td>
+                    <td>
+                        <a style="color: white;" class="btn btn-info">View</a>
+                        <a style="color: white;" class="btn btn-warning">Edit</a>
+                        <a style="color: white;" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div><!-- table-responsive -->
+</div><!-- section-wrapper -->
+
