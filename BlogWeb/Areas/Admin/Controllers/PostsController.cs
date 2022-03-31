@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BlogWeb.Areas.Admin.Models;
 using BlogWeb.Data;
+using BlogWeb.Helpers;
+using PagedList.Core;
 
 namespace BlogWeb.Areas.Admin.Controllers
 {
@@ -22,9 +24,18 @@ namespace BlogWeb.Areas.Admin.Controllers
         }
 
         // GET: Admin/Posts
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            return View(await _context.Post.ToListAsync());
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = Utilities.PAGE_SIZE; //20
+            //var pageSize = 2; 
+
+            var lsPost = _context.Post.OrderByDescending(x => x.PostId);
+
+            PagedList<Post> posts = new PagedList<Post>(lsPost, pageNumber, pageSize);
+
+            ViewBag.CurrentPage = pageNumber;
+            return View(posts);
         }
 
         // GET: Admin/Posts/View/5

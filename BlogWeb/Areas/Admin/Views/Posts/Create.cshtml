@@ -5,9 +5,8 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Create Post</h1>
 
-<h4>Post</h4>
 <hr />
 <div class="section-wrapper">
     <div class="form-layout">
@@ -17,14 +16,14 @@
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label asp-for="Title" class="control-label"></label>
-                        <input asp-for="Title" class="form-control" />
+                        <input asp-for="Title" type="text" class="form-control" />
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" class="form-control" />
+                        <input asp-for="Description" type="text" maxlength="254" class="form-control" />
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>
