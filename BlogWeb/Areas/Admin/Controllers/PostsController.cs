@@ -60,6 +60,7 @@ namespace BlogWeb.Areas.Admin.Controllers
         // GET: Admin/Posts/Create
         public IActionResult Create()
         {
+            ViewBag.CurrentTime = DateTime.UtcNow.ToString("s");
             return View();
         }
 
@@ -106,7 +107,7 @@ namespace BlogWeb.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
+            ViewBag.CurrentTime = DateTime.UtcNow.ToString("s");
             var post = await _context.Post.FindAsync(id);
             if (post == null)
             {
