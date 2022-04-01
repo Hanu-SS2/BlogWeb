@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {}
+    "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {}
   },
   "projects": {
-    "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {
+    "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "projectUniqueName": "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
         "projectName": "BlogWeb",
-        "projectPath": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
-        "packagesPath": "C:\\Users\\Zoro\\.nuget\\packages\\",
-        "outputPath": "E:\\.Net\\BlogWeb\\BlogWeb\\obj\\",
+        "projectPath": "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "packagesPath": "C:\\Users\\BAO BAO\\.nuget\\packages\\",
+        "outputPath": "D:\\SS2\\BlogWeb\\BlogWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Zoro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BAO BAO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -85,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

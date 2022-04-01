@@ -1,0 +1,52 @@
+﻿@model BlogWeb.Models.Role
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <!-- Roles Controller --> 
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Roles" asp-action="Index">Role Management</a></li>
+        <li class="breadcrumb-item active" aria-current="page" asp-area="Admin" asp-controller="Roles" asp-action="Delete" >Details Role</li>
+    </ol>
+    <h6 class="slim-pagetitle">Details role</h6>
+</div><!-- slim-pageheader -->
+<div class="section-wrapper mg-t-20">
+    <div class="form-layout form-layout-7">
+         <div class="row no-gutters">
+             <div class="col-5 col-sm-4">
+                 ID:
+             </div>
+             <div class="col-7 col-sm-8">
+                <input type="text" asp-for="RoleId" class="form-control"/>
+            </div>
+        </div>
+        
+        <div class="row no-gutters">
+             <div class="col-5 col-sm-4">
+                 Role Name:
+             </div>
+             <div class="col-7 col-sm-8">
+                <input type="text" asp-for="RoleName" class="form-control"/>
+            </div>
+        </div> 
+        <div class="row no-gutters">
+             <div class="col-5 col-sm-4">
+                 Role Description:
+             </div>
+             <div class="col-7 col-sm-8">
+                <input type="text" asp-for="RoleDescription" class="form-control"/>
+            </div>
+        </div>
+    </div>
+   <div class="mg-t-30" style="text-align:center !important">
+       <a asp-area="Admin" asp-controller="Roles"asp-action="Edit" 
+                asp-route-id="@Model?.RoleId"  
+                    class="btn btn-warning bd-0">Edit</a> | |
+        <a asp-area="Admin" asp-controller="Roles" asp-action="Index" 
+                class="btn btn-success bd-0">Back to List</a>
+   </div>
+</div>

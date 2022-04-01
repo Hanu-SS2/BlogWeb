@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlogWeb",
+    "\\BlogWeb\\Areas",
+    "\\BlogWeb\\Areas\\Admin",
+    "\\BlogWeb\\Areas\\Admin\\Controllers",
+    "\\BlogWeb\\Areas\\Admin\\Views",
+    "\\BlogWeb\\Data",
+    "\\BlogWeb\\Models"
+  ],
+  "SelectedNode": "\\BlogWeb.sln",
+  "PreviewInSolutionExplorer": false
+}
