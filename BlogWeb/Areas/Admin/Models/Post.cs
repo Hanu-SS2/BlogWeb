@@ -9,5 +9,6 @@ namespace BlogWeb.Areas.Admin.Models
         public string Contents { get; set; }
         public string Thumb { get; set; }
         public DateTime CreateDate { get; set; }
+
     }
 }

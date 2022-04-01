@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BlogWeb.Areas.Admin.Models;
@@ -67,6 +68,25 @@ namespace BlogWeb.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post, Microsoft.AspNetCore.Http.IFormFile Thumb)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (Thumb != null)
+        //        {
+        //            string extension = Path.GetExtension(Thumb.FileName);
+        //            string Newname = Utilities.SEOUrl(post.Title) + "preview" + extension;
+        //            post.Thumb = await Utilities.UploadFile(Thumb, @"thumb\", Newname.ToLower());
+        //        }
+
+
+        //        _context.Add(post);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(post);
+        //}
+
         public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post)
         {
             if (ModelState.IsValid)
@@ -77,6 +97,7 @@ namespace BlogWeb.Areas.Admin.Controllers
             }
             return View(post);
         }
+
 
         // GET: Admin/Posts/Edit/5
         public async Task<IActionResult> Edit(int? id)

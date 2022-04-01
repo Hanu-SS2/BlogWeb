@@ -5,50 +5,65 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Create Post</h1>
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <!-- Roles Controller --> 
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">List Post</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create Post</li>
+    </ol>
+    <h6 class="slim-pagetitle">Edit Posts</h6>
+</div><!-- slim-pageheader -->
 
 <hr />
 <div class="section-wrapper">
     <div class="form-layout">
-        <form asp-action="Create">
+        @*<form asp-area="Admin" asp-controller="Post" asp-action="Create" method="post" enctype="multipart/form-data">*@
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row mg-b-25">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label asp-for="Title" class="control-label"></label>
-                        <input asp-for="Title" type="text" class="form-control" />
-                        <span asp-validation-for="Title" class="text-danger"></span>
+                        <label class="form-control-label" asp-for="Title"></label>
+                        <input type="text" class="form-control" asp-for="Title"  />
+                        <span class="text-danger"></span>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label asp-for="Description" class="control-label"></label>
-                        <input asp-for="Description" type="text" maxlength="254" class="form-control" />
-                        <span asp-validation-for="Description" class="text-danger"></span>
+                        <label class="form-control-label" asp-for="Description"></label>
+                        <input type="text" maxlength="254" class="form-control" asp-for="Description" />
+                        <span class="text-danger"></span>
+                    </div>
+                </div>
+                @*<div class="col-lg-12">
+                    <div class="form-group mg-b-10-force" >
+                        <label class="form-control-label" asp-for="Thumb"></label>
+                        <input name="Thumb" type="file" class="form-control-file" asp-for="Thumb" />
+                        <span class="text-danger"></span>
+                    </div>
+                </div>*@
+                <div class="col-lg-12">
+                    <div class="form-group" >
+                        <label class="form-control-label" asp-for="Thumb"></label>
+                        <input type="text" class="form-control" asp-for="Thumb" />
+                        <span class="text-danger"></span>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label asp-for="Thumb" class="control-label"></label>
-                        <input asp-for="Thumb" class="form-control" />
-                        <span asp-validation-for="Thumb" class="text-danger"></span>
+                        <label class="form-control-label" asp-for="Contents"></label>
+                        <input type="text" class="form-control" asp-for="Contents" />
+                        <span class="text-danger"></span>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label asp-for="Contents" class="control-label"></label>
-                        <input asp-for="Contents" class="form-control" />
-                        <span asp-validation-for="Contents" class="text-danger"></span>
+                        <label asp-for="CreateDate" class="control-label"></label>
+                        <input asp-for="CreateDate" class="form-control" />
+                        <span class="text-danger"></span>
                     </div>
                 </div>
-            
-            </div>
-           
-            
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
