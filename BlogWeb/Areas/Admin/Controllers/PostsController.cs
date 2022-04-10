@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 using BlogWeb.Areas.Admin.Models;
 using BlogWeb.Data;
 using BlogWeb.Helpers;
 using PagedList.Core;
+using System.Web;
 
 namespace BlogWeb.Areas.Admin.Controllers
 {
@@ -25,39 +27,31 @@ namespace BlogWeb.Areas.Admin.Controllers
         }
 
         // GET: Admin/Posts
-        public IActionResult Index(int? page)
+        [HttpGet]
+        public IActionResult Index(int? page, string searchSring)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE; //20
-            //var pageSize = 2; 
+            //var pageSize = 2;
 
-            var lsPost = _context.Post.OrderByDescending(x => x.PostId);
+            var lsPost = _context.Post.AsQueryable();
+            if (!string.IsNullOrEmpty(searchSring))
+            {
+                lsPost = lsPost.Where(x => x.Title.Contains(searchSring) || x.Description.Contains(searchSring));
+            }
 
+            lsPost.OrderByDescending(x => x.PostId);
             PagedList<Post> posts = new PagedList<Post>(lsPost, pageNumber, pageSize);
+            ViewBag.SearchSring = searchSring;
 
             ViewBag.CurrentPage = pageNumber;
             return View(posts);
         }
 
-        // GET: Admin/Posts/View/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
 
-        //    var post = await _context.Post
-        //        .FirstOrDefaultAsync(m => m.PostId == id);
-        //    if (post == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(post);
-        //}
 
         // GET: Admin/Posts/Create
+        [HttpGet]
         public IActionResult Create()
         {
             ViewBag.CurrentTime = DateTime.UtcNow.ToString("s");
@@ -69,29 +63,11 @@ namespace BlogWeb.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post, Microsoft.AspNetCore.Http.IFormFile Thumb)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (Thumb != null)
-        //        {
-        //            string extension = Path.GetExtension(Thumb.FileName);
-        //            string Newname = Utilities.SEOUrl(post.Title) + "preview" + extension;
-        //            post.Thumb = await Utilities.UploadFile(Thumb, @"thumb\", Newname.ToLower());
-        //        }
-
-
-        //        _context.Add(post);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    return View(post);
-        //}
-
         public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post)
         {
             if (ModelState.IsValid)
             {
+
                 _context.Add(post);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -101,6 +77,7 @@ namespace BlogWeb.Areas.Admin.Controllers
 
 
         // GET: Admin/Posts/Edit/5
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -152,6 +129,7 @@ namespace BlogWeb.Areas.Admin.Controllers
         }
 
         // GET: Admin/Posts/Delete/5
+        [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

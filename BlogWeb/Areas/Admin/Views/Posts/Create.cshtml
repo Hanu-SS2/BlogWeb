@@ -12,13 +12,12 @@
         <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Index">List Post</a></li>
         <li class="breadcrumb-item active" aria-current="page">Create Post</li>
     </ol>
-    <h6 class="slim-pagetitle">Edit Posts</h6>
+    <h6 class="slim-pagetitle">Create Posts</h6>
 </div><!-- slim-pageheader -->
 
 <hr />
 <div class="section-wrapper">
     <div class="form-layout">
-        @*<form asp-area="Admin" asp-controller="Post" asp-action="Create" method="post" enctype="multipart/form-data">*@
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row mg-b-25">
@@ -39,7 +38,7 @@
                 @*<div class="col-lg-12">
                     <div class="form-group mg-b-10-force" >
                         <label class="form-control-label" asp-for="Thumb"></label>
-                        <input name="Thumb" type="file" class="form-control-file" asp-for="Thumb" />
+                        <input name="UploadThumb" type="file" class="form-control-file" id="UploadThumb"  accept="image/*"/>
                         <span class="text-danger"></span>
                     </div>
                 </div>*@

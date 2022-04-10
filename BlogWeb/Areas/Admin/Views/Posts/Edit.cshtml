@@ -18,7 +18,7 @@
 <hr />
 <div class="section-wrapper">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit"  enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="PostId" />
             <div class="row mg-b-25"> 
@@ -47,6 +47,7 @@
                      <div class="form-group">
                         <label asp-for="Thumb" class="control-label"></label>
                         <input asp-for="Thumb" class="form-control" />
+                        @*<input name="UploadThumb" type="file" class="form-control-file" id="UploadThumb"  accept="image/*"/>*@
                         <span asp-validation-for="Thumb" class="text-danger"></span>
                     </div>
                  </div>
