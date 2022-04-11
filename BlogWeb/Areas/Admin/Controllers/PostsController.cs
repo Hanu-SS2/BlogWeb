@@ -4,15 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
 using BlogWeb.Areas.Admin.Models;
 using BlogWeb.Data;
-using BlogWeb.Helpers;
 using PagedList.Core;
-using System.Web;
+using BlogWeb.Helpers;
 
 namespace BlogWeb.Areas.Admin.Controllers
 {
@@ -20,10 +17,12 @@ namespace BlogWeb.Areas.Admin.Controllers
     public class PostsController : Controller
     {
         private readonly BlogWebContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public PostsController(BlogWebContext context)
+        public PostsController(BlogWebContext context,  IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
+            this._webHostEnvironment = webHostEnvironment;
         }
 
         // GET: Admin/Posts
@@ -63,18 +62,28 @@ namespace BlogWeb.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post)
+        public async Task<IActionResult> Create([Bind("PostId,Title,Description,Contents,image,CreateDate")] Post post)
         {
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            string fileName = Path.GetFileNameWithoutExtension(post.image.FileName);
+            string extension = Path.GetExtension(post.image.FileName);
+
+            post.imageName = fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+
+            string path = Path.Combine(wwwRootPath + "\\images\\", fileName);
+            using (var fileStream = new FileStream(path, FileMode.Create))
+            {
+                await post.image.CopyToAsync(fileStream);
+            }
+ 
             if (ModelState.IsValid)
             {
-
                 _context.Add(post);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(post);
         }
-
 
         // GET: Admin/Posts/Edit/5
         [HttpGet]
@@ -98,7 +107,7 @@ namespace BlogWeb.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Description,Contents,Thumb,CreateDate")] Post post)
+        public async Task<IActionResult> Edit(int id, [Bind("PostId,Title,Description,Contents,imageName,CreateDate")] Post post)
         {
             if (id != post.PostId)
             {
@@ -129,7 +138,6 @@ namespace BlogWeb.Areas.Admin.Controllers
         }
 
         // GET: Admin/Posts/Delete/5
-        [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

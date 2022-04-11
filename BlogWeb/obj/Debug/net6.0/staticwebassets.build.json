@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QV9Imyb7aSHrpmEmfJ60jxgEzU0ng7nYNB7zSrgE2pE=",
+  "Hash": "RzlxU+Ql6LdRRfqU9DfMO4kF3i8RYYlW663ZhKyOkMg=",
   "Source": "BlogWeb",
   "BasePath": "_content/BlogWeb",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\hhiep\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\images\\244103256_1990343444461834_2454492404533505692_n221009814.jpg",
+      "SourceId": "BlogWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhiep\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\",
+      "BasePath": "_content/BlogWeb",
+      "RelativePath": "images/244103256_1990343444461834_2454492404533505692_n221009814.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\244103256_1990343444461834_2454492404533505692_n221009814.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hhiep\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\images\\adrian-smith-hate-sculpt2-sketch220918114.jpg",
+      "SourceId": "BlogWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhiep\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\",
+      "BasePath": "_content/BlogWeb",
+      "RelativePath": "images/adrian-smith-hate-sculpt2-sketch220918114.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\adrian-smith-hate-sculpt2-sketch220918114.jpg"
     },
     {
       "Identity": "C:\\Users\\hhiep\\source\\repos\\BlogWeb\\BlogWeb\\wwwroot\\js\\site.js",

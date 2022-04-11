@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\TemplateAssets\lib\echarts\extension\" />
     <Folder Include="wwwroot\TemplateAssets\lib\summernote\lang\" />
   </ItemGroup>

@@ -31,10 +31,10 @@
             @Html.DisplayFor(model => model.Contents)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Thumb)
+            @Html.DisplayNameFor(model => model.imageName)
         </dt>
         <dd class = "col-sm-10">
-            <img src="@Model.Thumb" width="500" height="600"/>
+            @Html.DisplayFor(model => model.imageName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CreateDate)

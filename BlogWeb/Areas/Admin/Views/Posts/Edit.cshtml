@@ -45,15 +45,14 @@
                  </div>
                  <div class="col-lg-12">
                      <div class="form-group">
-                        <label asp-for="Thumb" class="control-label"></label>
-                        <input asp-for="Thumb" class="form-control" />
-                        @*<input name="UploadThumb" type="file" class="form-control-file" id="UploadThumb"  accept="image/*"/>*@
-                        <span asp-validation-for="Thumb" class="text-danger"></span>
+                        <label asp-for="imageName" class="control-label"></label>
+                        <input asp-for="imageName" type="file" class="form-control-file" class="form-control" />
+                        <span asp-validation-for="imageName" class="text-danger"></span>
                     </div>
                  </div>
                  <div class="col-lg-12">
                      <h4>Previous picture</h4>
-                     <img src="@Model.Thumb" width="500" height="600"/>
+                     <img src="/images/@Model.imageName" width="500" height="600"/>
                  </div>
 
                  <div class="col-lg-12">
@@ -75,4 +74,5 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
 
