@@ -41,6 +41,12 @@
     <link href="~/TemplateAssets/css/slim.css" rel="stylesheet" />
 
 
+   <!-- Summer Note -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+
   </head>
   <body>
     <div class="slim-header">
@@ -274,5 +280,10 @@
     <script src="~/TemplateAssets/js/ResizeSensor.js"></script>
     <script src="~/TemplateAssets/js/dashboard.js"></script>
     <script src="~/TemplateAssets/js/slim.js"></script>
+
+    
+    
+    @await RenderSectionAsync("Scripts", required: false)
+
   </body>
 </html>

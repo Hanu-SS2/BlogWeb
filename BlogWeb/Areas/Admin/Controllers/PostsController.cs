@@ -11,6 +11,7 @@ using BlogWeb.Data;
 using PagedList.Core;
 using BlogWeb.Helpers;
 
+
 namespace BlogWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -84,6 +85,35 @@ namespace BlogWeb.Areas.Admin.Controllers
             }
             return View(post);
         }
+
+        [HttpPost]
+        public JsonResult UploadFile(IFormFile uploadedFiles)
+        {
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            string returnImagePath = string.Empty;
+            string fileName;
+            string Extension;
+            string imageName;
+            string imageSavePath;
+
+            if (uploadedFiles.Length > 0)
+            {
+                fileName = Path.GetFileNameWithoutExtension(uploadedFiles.FileName);
+                Extension = Path.GetExtension(uploadedFiles.FileName);
+                imageName = fileName + DateTime.Now.ToString("yyyyMMddHHmmss");
+                imageSavePath = Path.Combine(wwwRootPath + "\\postedImage\\" + imageName + Extension);
+
+                using (var fileStream = new FileStream(imageSavePath, FileMode.Create))
+                {
+                    uploadedFiles.CopyTo(fileStream);
+                }
+
+                returnImagePath = "/postedImage/" + imageName + Extension;
+            }
+
+            return Json(Convert.ToString(returnImagePath), new Newtonsoft.Json.JsonSerializerSettings());
+        }
+
 
         // GET: Admin/Posts/Edit/5
         [HttpGet]

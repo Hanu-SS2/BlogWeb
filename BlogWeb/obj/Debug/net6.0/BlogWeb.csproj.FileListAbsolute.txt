@@ -1113,3 +1113,4 @@ C:\Users\hhiep\Source\Repos\BlogWeb\BlogWeb\obj\Debug\net6.0\BlogWeb.dll
 C:\Users\hhiep\Source\Repos\BlogWeb\BlogWeb\obj\Debug\net6.0\ref\BlogWeb.dll
 C:\Users\hhiep\Source\Repos\BlogWeb\BlogWeb\obj\Debug\net6.0\BlogWeb.pdb
 C:\Users\hhiep\Source\Repos\BlogWeb\BlogWeb\obj\Debug\net6.0\BlogWeb.genruntimeconfig.cache
+C:\Users\hhiep\source\repos\BlogWeb\BlogWeb\bin\Debug\net6.0\libman.json
