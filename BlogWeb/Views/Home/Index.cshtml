@@ -1,8 +1,41 @@
-﻿@{
+﻿@model IEnumerable<BlogWeb.Models.Post>
+@{
     ViewData["Title"] = "Home Page";
 }
+<div class="container">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row align-content-center">
+            <div class="col-lg-4 col-md-3 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="https://ps.w.org/recent-posts-widget-with-thumbnails/assets/icon-256x256.png?rev=2478511" class="card-img-top">
+                    <div class="card-body">
+                        <div class="row text-center" style="margin: 0px auto 10px 0px;">
+                            <h5 class="card-title text-center w-100"><a asp-controller="Post" asp-action="Index">Posts</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-3 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="https://suncloud.vn/web/assets/images/feedbacks/8.png" class="card-img-top">
+                    <div class="card-body">
+                        <div class="row text-center" style="margin: 0px auto 10px 0px;">
+                            <h5 class="card-title text-center w-100"><a asp-controller="Post" asp-action="Index">Authors</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-md-3 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMByN7TVGyimk6ujhqEFpskqe5B6NM_oYL9g&usqp=CAU" class="card-img-top">
+                    <div class="card-body">
+                        <div class="row text-center" style="margin: 0px auto 10px 0px;">
+                            <h5 class="card-title text-center w-100"><a asp-controller="Favorites" asp-action="Index">Bookmarks</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 </div>

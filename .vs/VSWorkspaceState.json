@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlogWeb",
+    "\\BlogWeb\\Areas",
+    "\\BlogWeb\\Areas\\Admin",
+    "\\BlogWeb\\Areas\\Admin\\Controllers",
+    "\\BlogWeb\\Areas\\Admin\\Views",
+    "\\BlogWeb\\Areas\\Admin\\Views\\Shared",
+    "\\BlogWeb\\Controllers",
+    "\\BlogWeb\\Models",
+    "\\BlogWeb\\Views"
+  ],
+  "SelectedNode": "\\BlogWeb\\Models\\Comment.cs",
+  "PreviewInSolutionExplorer": false
+}
