@@ -1,0 +1,60 @@
+﻿@model BlogWeb.Areas.Admin.Models.Comment
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Details</h1>
+
+@*<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Index">Comment Management</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Details Comment</li>
+    </ol>
+    <h6 class="slim-pagetitle">Comment Management</h6>
+
+</div>
+<div class="section-wrapper mg-t-20">
+    <div class="form-layout form-layout-7">
+        <div class="row no-gutter">
+            <div class="col-5 col-sm-4">
+                ID:
+            </div>
+            <div class="col-7 col-sm-8">
+                <input asp-for="Id" class="form-control"  />
+            </div>
+        </div>
+        <div class="row no-gutter">
+            <div class="col-5 col-sm-4">
+                Name:
+            </div>
+            <div class="col-7 col-sm-8">
+                <input asp-for="Content" class="form-control"  />
+            </div>
+        </div>
+       
+    </div>
+    <div style="text-align: center !important" class="form-layout-footer mg-t-30">
+        <a asp-area="Admin" asp-controller="Comments"  asp-route-id="@Model.Id" asp-action="Edit" class="btn btn-primary bd-0">Edit</a>
+        <a asp-area="Admin" asp-controller="Comments" asp-action="Index" class="btn btn-success bd-0">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+﻿@using PagedList.Core.Mvc;
+@model PagedList.Core.IPagedList<BlogWeb.Areas.Admin.Models.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Comment Management</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Index">Comment Management</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Create">Create New Comment</a></li>
+    </ol>
+    <h6 class="slim-pagetitle">Comment Management</h6>
+
+</div>
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Content
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Count() > 0)
+                 {
+                    foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Content</td>
+                               
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                </td>
+                                    
+                            </tr>
+                        }
+                }
+                else
+                {
+                   <tr>
+                       <td><i> no records!</i></td>
+                   </tr> 
+                }
+            </tbody>
+        </table>
+        <div aria-label="Page navigation example">
+            <ul class="pagination"> 
+                <pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4PageNumbersOnly" asp-action="Index" asp-controller="Comments" asp-area="Admin" />
+            </ul>
+        </div>
+    </div>
+</div>

@@ -9722,19 +9722,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Zoro\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Source\\Repos\\Hanu-SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
       "projectName": "BlogWeb",
-      "projectPath": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
-      "packagesPath": "C:\\Users\\Zoro\\.nuget\\packages\\",
-      "outputPath": "E:\\.Net\\BlogWeb\\BlogWeb\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Source\\Repos\\Hanu-SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Source\\Repos\\Hanu-SS2\\BlogWeb\\BlogWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Zoro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
