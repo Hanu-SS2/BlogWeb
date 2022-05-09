@@ -1,0 +1,28 @@
+﻿@model BlogWeb.Areas.Admin.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminLogin.cshtml";
+}
+
+<form asp-area="Admin" asp-controller="Accounts" asp-action="Login" method="post">
+    <div class="signin-box">
+        <h2 class="slim-logo">
+            <a href="/">Blog<span>.</span></a>
+        </h2>
+        <h3 class="signin-title-secondary">Sign in to continue.</h3>
+         <p class="mg-b-0">
+            @ViewBag.Error
+        </p>
+        <br/>
+        <div class="form-group">
+            <input type="email" class="form-control" asp-for="Email" placeholder="Enter your email" />
+        </div>
+        <div class="form-group mg-b-50">
+            <input type="password" class="form-control" asp-for="Password" placeholder="Enter your password" />
+        </div>
+        <button class="btn-primary btn-primary btn-block btn-signin">Sign In</button>
+       
+    </div>  
+</form>
+
+

@@ -8,141 +8,157 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlogWeb
 build_property.RootNamespace = BlogWeb
-build_property.ProjectDir = D:\SS2\BlogWeb\BlogWeb\
+build_property.ProjectDir = D:\SS2\final project\BlogWeb\BlogWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\SS2\BlogWeb\BlogWeb
+build_property.MSBuildProjectDirectory = D:\SS2\final project\BlogWeb\BlogWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Create.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Delete.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Details.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Edit.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Create.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Delete.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Details.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Edit.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Home/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Create.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Delete.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Details.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Edit.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Create.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Delete.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Details.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Edit.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/Error.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/Home/Index.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/Home/Privacy.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/Shared/Error.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/_ViewImports.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Views/_ViewStart.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SS2/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-vhkjb8byvq
 
-[D:/SS2/BlogWeb/BlogWeb/Views/Shared/_Layout.cshtml]
+[D:/SS2/final project/BlogWeb/BlogWeb/Areas/Admin/Views/Shared/_LayoutAdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbkxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-xdkrvgi3q5
+
+[D:/SS2/final project/BlogWeb/BlogWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-44pdqz3gdi

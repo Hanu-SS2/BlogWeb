@@ -6,6 +6,7 @@
     "\\BlogWeb\\Areas\\Admin",
     "\\BlogWeb\\Areas\\Admin\\Controllers",
     "\\BlogWeb\\Areas\\Admin\\Views",
+    "\\BlogWeb\\Areas\\Admin\\Views\\Roles",
     "\\BlogWeb\\Data",
     "\\BlogWeb\\Models"
   ],

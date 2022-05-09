@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {}
+    "D:\\SS2\\final project\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {}
   },
   "projects": {
-    "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {
+    "D:\\SS2\\final project\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "projectUniqueName": "D:\\SS2\\final project\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
         "projectName": "BlogWeb",
-        "projectPath": "D:\\SS2\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "projectPath": "D:\\SS2\\final project\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
         "packagesPath": "C:\\Users\\BAO BAO\\.nuget\\packages\\",
-        "outputPath": "D:\\SS2\\BlogWeb\\BlogWeb\\obj\\",
+        "outputPath": "D:\\SS2\\final project\\BlogWeb\\BlogWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BAO BAO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,37 +42,37 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.3, )"
             },
             "PagedList.Core.Mvc": {
               "target": "Package",
