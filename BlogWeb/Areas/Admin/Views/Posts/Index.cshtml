@@ -1,0 +1,99 @@
+﻿@*@model IEnumerable<BlogWeb.Areas.Admin.Models.Post>*@
+
+@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<BlogWeb.Areas.Admin.Models.Post>
+
+@{
+    ViewData["Title"] = "Mangane Posts";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <!-- Roles Controller --> 
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Posts" asp-action="Create">Create new Post</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Post List</li>
+    </ol>
+    <h6 class="slim-pagetitle">Manage Posts</h6>
+</div><!-- slim-pageheader -->
+
+
+@using (Html.BeginForm("Index", "Posts", FormMethod.Get))
+{
+    <div class="row mb-2">
+        <div class="input-group d-flex justify-content-center">
+            <div class="form-outline">
+                <input type="text" value="@ViewBag.SearchSring" name="searchSring" />
+            </div>
+               <button type="submit">Search</button>
+
+        </div>
+    </div>
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().PostId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Contents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CreateDate)
+            </th>
+            <th>Category</th>
+            <th>View</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contents)
+            </td>
+            <td>
+                <img src="/images/@item.imageName" width="100" height="132"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+            <td> @Html.DisplayFor(modelItem => item.Category.Title)</td>
+            <td>
+                <a href="#" target"_blank" type="button" class="btn btn-success">View</a> 
+            </td>
+            <td>
+                <a type="button" class="btn btn-primary" asp-area="Admin" asp-controller="Posts" asp-action="Edit" asp-route-id="@item.PostId">Edit</a> 
+                <a type="button" class="btn btn-danger"  asp-area="Admin" asp-controller="Posts" asp-action="Delete" asp-route-id="@item.PostId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@*phan trang*@
+<div aria-label="Page navigation example">
+    <ul class="pagination">
+        <pager class="pager-container" options="@PagedListRenderOptions.Bootstrap4PageNumbersOnly" list="@Model" asp-area="Admin" asp-controller="Posts" asp-action="Index" />
+    </ul>
+</div>

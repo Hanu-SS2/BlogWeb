@@ -1,0 +1,60 @@
+﻿@model BlogWeb.Areas.Admin.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Categories" asp-action="Index">Category Management</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Category</li>
+    </ol>
+    <h6 class="slim-pagetitle">Category Management</h6>
+</div>
+<div class="section-wrapper">
+    <div class="form-layout">
+        <form asp-area="Admin" asp-action="Edit" asp-controller="Categories">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CategoryId" />
+            <div class="row mg-b-25">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Title" class="control-label"></label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label"></label>
+                        <input asp-for="Content" class="form-control" />
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group mg-b-10-force">
+                        <label asp-for="ParentCategoryId" class="control-label"></label>
+                        <select class="form-control select2" asp-for="ParentCategoryId" asp-items="ViewBag.ParentCategoryId" required>
+                        </select>
+                        <span asp-validation-for="ParentCategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-layout-footer col-lg-6">
+                    <input type="submit" value="Save" class="btn btn-primary bd-0" />
+                </div>
+            </div>
+        </form>
+        <div>
+            <a asp-action="index" class="btn btn-secondary bd-0" >Back to List</a>
+        </div>
+    </div>
+</div>
