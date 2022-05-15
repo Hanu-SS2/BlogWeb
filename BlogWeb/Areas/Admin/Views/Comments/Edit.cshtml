@@ -1,0 +1,64 @@
+﻿@model BlogWeb.Areas.Admin.Models.Comment
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Edit</h1>
+
+@*<h4>Comment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <input asp-for="Content" class="form-control" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Index">Comment Management</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Edit Comment</li>
+    </ol>
+    <h6 class="slim-pagetitle">Comment Management</h6>
+</div>
+<div class="section-wrapper">
+    <div class="form-layout">
+        <form asp-area="Admin" asp-action="Edit" asp-controller="Comments">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CommentId" />
+            <div class="row mg-b-25">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label"></label>
+                        <input asp-for="Content" class="form-control" />
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                </div>        
+            </div>
+                   <div style="text-align: center !important">
+                       <input type="submit"  value="Save" class="btn btn-primary bd-0" />
+                        <a asp-action="index" class="btn btn-success bd-0" >Back to List</a>
+                   </div>
+        </form>
+        
+    </div>
+</div>
+
+

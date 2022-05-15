@@ -1,0 +1,113 @@
+﻿@model IEnumerable<BlogWeb.Areas.Admin.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Account Management</h1>
+
+@*<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+*@
+
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Accounts" asp-action="Index">Account Management</a></li>
+         <li class="breadcrumb-item active" aria-current="page">View List</li>
+    </ol>
+    <h6 class="slim-pagetitle">Account Management</h6>
+
+</div>
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                    <th>
+                        FullName
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Count() > 0)
+                 {
+                    foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>@item.AccountId</td>
+                                <td>@item.Email</td>
+                               <td>@item.Password</td>
+                               <td>@item.FullName</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-success">Edit</a>
+                                    <a asp-action="Details" asp-route-id="@item.AccountId" class="btn btn-primary">Details</a>
+                                    <a asp-action="Delete" asp-route-id="@item.AccountId" class="btn btn-danger">Delete</a>
+                                </td>
+                                    
+                            </tr>
+                        }
+                }
+                else
+                {
+                   <tr>
+                       <td><i> no records!</i></td>
+                   </tr> 
+                }
+            </tbody>
+        </table>
+         </div>
+</div>
