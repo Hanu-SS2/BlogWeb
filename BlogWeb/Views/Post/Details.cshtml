@@ -38,6 +38,16 @@
     </script>
 }
 
+@if (TempData.ContainsKey("Success"))
+{
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("@TempData["Success"]");
+        };
+    </script>
+}
+
 @using (Html.BeginForm("AddToFavorite", "Post", new { @postId = @post.PostId }, FormMethod.Post))
 {
     <button style="margin-left: 76%" class="btn btn-danger mb-2" type="submit"><i class='fas fa-bookmark'></i></button>

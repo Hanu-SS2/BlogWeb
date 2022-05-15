@@ -130,6 +130,7 @@ namespace BlogWeb.Controllers
                 comment.CreatedDate = DateTime.Now;
                 _dbContext.Add(comment);
                 _dbContext.SaveChangesAsync();
+                TempData["Success"] = "Send a comment successfully!";
                 return RedirectToAction("Details", new RouteValueDictionary(
                         new {
                             controller = "Post", action = "Details", id = postId }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BlogWeb.Models.Post>
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    BlogDBContext _context = new BlogDBContext();
+    List<AdminAccount> adminAccounts = _context.AdminAccounts.ToList();
+}
+<div class="container">
+      <form asp-controller="Post" asp-action="Index" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group mb-3">
+             <input name="keyword" type="text" class="form-control" placeholder="Search posts for..." />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" style="padding: 0 10px 0 10px">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row align-content-center mt-4">
+        @foreach (var post in Model) {
+            <div class="col-lg-4 col-md-3 mb-4">
+                <div class="card border-0 shadow">
+                     <img src="@post.Thumb" class="card-img-top">
+                    <div class="card-body">
+                        <div class="row" style="margin: 0px auto 0px 0px;">
+                             <div class="card-title text-center w-100" style="font-weight: bold">
+                                <div> 
+                                <a asp-controller="Post" asp-action="Details" asp-route-id="@post.PostId"> @Html.DisplayFor(postItem => post.Title) </a>
+                                </div>
+                             </div>
+                             <div id="text-description" class="card-body text-length">@Html.DisplayFor(postItem => post.Description)</div>
+                               @foreach (var adminAcc in adminAccounts)
+                               {
+                                   @if(adminAcc.AdminAccountId == post.AdminAccountId)
+                                {
+                                    <div id="text-author" class="card-body"> Posted  by @Html.DisplayFor(adminItem => adminAcc.FullName)</div>
+                                }
+                               }
+                            @using (Html.BeginForm("AddToFavorite", "Post", new { @postId = @post.PostId},  FormMethod.Post))
+                            {
+                                    <button class="btn-favorite text text-danger" type="submit"><i class='fas fa-bookmark'></i></button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+   @* <div list="@Model.Posts" count="20">
+        <pager class="pager-container" list="@Model.Posts" options="@PagedListRenderOptions.Bootstrap4PageNumbersPlusPrevAndNext" asp-action="Index" asp-controller="Home" asp-route-query="@Model.SearchString" />
+    </div>*@
+</div>
+

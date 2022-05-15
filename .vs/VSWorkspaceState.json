@@ -4,13 +4,15 @@
     "\\BlogWeb",
     "\\BlogWeb\\Areas",
     "\\BlogWeb\\Areas\\Admin",
-    "\\BlogWeb\\Areas\\Admin\\Controllers",
     "\\BlogWeb\\Areas\\Admin\\Views",
     "\\BlogWeb\\Areas\\Admin\\Views\\Shared",
     "\\BlogWeb\\Controllers",
     "\\BlogWeb\\Models",
-    "\\BlogWeb\\Views"
+    "\\BlogWeb\\Views",
+    "\\BlogWeb\\Views\\Post",
+    "\\BlogWeb\\wwwroot",
+    "\\BlogWeb\\wwwroot\\css"
   ],
-  "SelectedNode": "\\BlogWeb\\Models\\Comment.cs",
+  "SelectedNode": "\\BlogWeb\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
