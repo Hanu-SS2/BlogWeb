@@ -1,0 +1,103 @@
+﻿@using BlogWeb.Data
+@using PagedList.Core.Mvc;
+@model PagedList.Core.IPagedList<BlogWeb.Models.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Comment Management</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="slim-pageheader">
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Index">Comment Management</a></li>
+        <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Comments" asp-action="Create">Create New Comment</a></li>
+    </ol>
+    <h6 class="slim-pagetitle">Comment Management</h6>
+
+</div>
+@*<p>
+    <a asp-action="Create">Create New</a>
+    </p>*@
+<div class="section-wrapper">
+    <div class="table-responsive">
+        <table class="table mg-b-0">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Content
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+                    <th>
+                        Post ID
+                    </th>
+                    <th>
+                        User ID
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        if (item.hidden == true)
+                        {
+                            <tr style="background-color:#d7d9de;">
+                                <td>@item.CommentId</td>
+                                <td>Hidded</td>
+                                <td>@item.CreatedDate</td>
+                                <td>@item.PostId</td>
+                                <td>@item.UserAccountId</td>
+                                <td>
+                                    <a asp-action="Details" asp-route-id="@item.CommentId" class="btn btn-primary">Details</a>
+                                    <a asp-action="Delete" asp-route-id="@item.CommentId" class="btn btn-danger">Delete</a>
+                                </td>
+
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>@item.CommentId</td>
+                                <td>@item.Contents</td>
+                                <td>@item.CreatedDate</td>
+                                <td>@item.PostId</td>
+                                <td>@item.UserAccountId</td>
+                                <td>
+                                    <a asp-action="Hidden" asp-route-id="@item.CommentId" class="btn btn-success">Hidden</a>
+                                    <a asp-action="Details" asp-route-id="@item.CommentId" class="btn btn-primary">Details</a>
+                                    <a asp-action="Delete" asp-route-id="@item.CommentId" class="btn btn-danger">Delete</a>
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td><i> no records!</i></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div aria-label="Page navigation example">
+            <ul class="pagination">
+                <pager class="pager-container" list="@Model" options="@PagedListRenderOptions.Bootstrap4PageNumbersOnly" asp-action="Index" asp-controller="Comments" asp-area="Admin" />
+            </ul>
+        </div>
+    </div>
+</div>

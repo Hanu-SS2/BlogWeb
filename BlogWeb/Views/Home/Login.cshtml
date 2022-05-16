@@ -1,0 +1,42 @@
+﻿@model BlogWeb.Models.UserLogin
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-5">
+        <div class="card">
+            <h3 class="card-header">
+                Login
+            </h3>
+            <div class="card-body">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, "", new {@class = "form-control", @placeholder = "Email" })
+                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        @if (ViewBag.error != null)
+                        {
+                            <span style="font-size:20px" class="text-danger">@ViewBag.error</span>
+                        }
+                    </div>
+                    <div class="mt-2 form-group">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Login"/>
+                    </div>
+
+                    <a class="text-info" asp-area="" asp-controller="Home" asp-action="Register">Register here </a>
+                }
+                
+            </div>
+        </div>
+    </div>
+</div>
+

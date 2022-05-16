@@ -1,0 +1,46 @@
+﻿#text-description {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-length {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#text-author {
+    font-size: 14px;
+    margin-left: 45%;
+    color: #7a7977;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif";
+}
+
+.text-length-2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.btn-remove-fav {
+    margin-left: 250px;
+}
+
+.btn-add-fav {
+    margin-left: 69%;
+}
+
+.btn-favorite {
+    border: none;
+    background-color: transparent;
+    margin-left: 250px;
+}
+
+    .btn-favorite:hover {
+        opacity: 0.3;
+    }
+
+.favorite-size {
+    font-size: 30px;
+}

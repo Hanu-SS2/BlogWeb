@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {}
+    "C:\\Users\\Zoro\\Downloads\\Blog\\BlogWeb\\BlogWeb.csproj": {}
   },
   "projects": {
-    "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj": {
+    "C:\\Users\\Zoro\\Downloads\\Blog\\BlogWeb\\BlogWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Zoro\\Downloads\\Blog\\BlogWeb\\BlogWeb.csproj",
         "projectName": "BlogWeb",
-        "projectPath": "E:\\.Net\\BlogWeb\\BlogWeb\\BlogWeb.csproj",
+        "projectPath": "C:\\Users\\Zoro\\Downloads\\Blog\\BlogWeb\\BlogWeb.csproj",
         "packagesPath": "C:\\Users\\Zoro\\.nuget\\packages\\",
-        "outputPath": "E:\\.Net\\BlogWeb\\BlogWeb\\obj\\",
+        "outputPath": "C:\\Users\\Zoro\\Downloads\\Blog\\BlogWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zoro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,29 +42,33 @@
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.4, )"
             },
             "PagedList.Core.Mvc": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
             }
           },
           "imports": [
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

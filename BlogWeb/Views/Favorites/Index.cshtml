@@ -1,0 +1,51 @@
+﻿@{
+    List<Post> listPost = ViewBag.Posts;
+    List<Favorite> favorites = ViewBag.Favorites;
+    List<UserAccount> userAccounts = ViewBag.UserAccounts;
+    var Session = Context.Session;
+    UserAccount? userAccount = ViewBag.User;
+}
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData.ContainsKey("Deleted"))
+{
+    <div class="alert alert-danger" role="alert">
+    @TempData["Deleted"]
+</div>
+}
+
+<div class="row align-content-center">
+            @foreach (var fav in favorites)
+            {
+        
+        @if(fav.UserAccountId == userAccount.UserAccountId)
+        {
+            <div class="col-lg-4 col-md-3 mb-4">
+                <div class="card border-0 shadow">
+                     <img src="/images/@fav.Post.Thumb" class="card-img-top">
+                    <div class="card-body">
+                        <a class="row" style="margin: 0px auto 0px 0px;">
+                             <div class="card-title text-center w-100" style="font-weight: bold">
+                                <div> 
+                                <a asp-controller="Post" asp-action="Details" asp-route-id="@fav.Post.PostId"> @Html.DisplayFor(postItem => fav.Post.Title) </a>
+                                </div>
+                             </div>
+                             <div id="text-description" class="card-body text-length">@Html.DisplayFor(postItem => fav.Post.Description)</div>
+                            <a asp-action="Delete" class="btn-remove-fav" style="font-size: 32px;" onclick="return confirm('Are you sure want to remove it?')" asp-route-id="@fav.FavoriteId"><i class="fas fa-times" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    </div>
+     @{
+            var checkedFav = favorites.Where(f => f.UserAccountId == userAccount.UserAccountId).FirstOrDefault();
+        }
+        @if(checkedFav == null)
+        {
+            <h3 class="text-warning text-center">No posts have been added yet!</h3>
+        }
+

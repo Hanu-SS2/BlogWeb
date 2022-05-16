@@ -1,0 +1,18 @@
+﻿@model BlogWeb.Models.Post
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h1>Post Content Details</h1>
+
+<h1></h1>
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="text-justify col-lg-8 col-md-10 mx-auto">
+                @Html.Raw(Model.Contents)
+            </div>
+        </div>
+    </div>
+</article>

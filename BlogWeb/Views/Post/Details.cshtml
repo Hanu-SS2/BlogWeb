@@ -1,0 +1,147 @@
+﻿@using BlogWeb.Data
+@model BlogWeb.Models.Comment
+
+@{
+    List<AdminAccount> adminAccounts = ViewBag.Admins;
+    List<UserAccount> userAccounts = ViewBag.UserAccounts;
+    List<Post> posts = ViewBag.Posts;
+    Post post = ViewBag.Post;
+    var Session = Context.Session;
+    int? userId = Session.GetInt32("UserAccountId");
+    UserAccount? user = ViewBag.User;
+    List<Comment>? comments = ViewBag.Comments;
+    Comment? checkedCommemnt = comments.Where(c => c.PostId == post.PostId).FirstOrDefault();
+}
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_DetailLayout.cshtml";
+
+    ViewData["HeaderImage"] = "/images/" + post.Thumb;
+    ViewData["HeaderTitle"] = post.Title;
+    foreach (var admin in adminAccounts)
+    {
+        if (post.AdminAccountId == admin.AdminAccountId)
+        {
+            ViewData["AuthorName"] = admin.FullName;
+            ViewData["AuthorId"] = admin.AdminAccountId;
+        }
+    }
+    ViewData["PostDate"] = post.CreatedDate.ToString("MMMM d, yyyy");
+}
+
+@if (TempData.ContainsKey("Deleted"))
+{
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("@TempData["Deleted"]");
+        };
+    </script>
+}
+
+@if (TempData.ContainsKey("Success"))
+{
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("@TempData["Success"]");
+        };
+    </script>
+}
+
+@using (Html.BeginForm("AddToFavorite", "Post", new { @postId = @post.PostId }, FormMethod.Post))
+{
+    <button style="margin-left: 76%" class="btn btn-danger mb-2" type="submit"><i class='fas fa-bookmark'></i></button>
+}
+<article>
+
+    <div class="container">
+        <div class="row">
+            <div class="text-justify col-lg-8 col-md-10 mx-auto">
+                @Html.Raw(post.Contents)
+            </div>
+        </div>
+
+
+        @*Comment*@
+        <div class="row mt-5">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @if (userId == null)
+                {
+                    <a class="btn btn-success text-center" asp-controller="Home" asp-action="Login">Login to comment on this post</a>
+                }
+                else
+                {
+                    <div>
+                        @using (Html.BeginForm("Comment", "Post", new { @postId = @post.PostId }, FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <label for="comment">Comment</label>
+                                <textarea asp-for="Contents" class="form-control" rows="3" required></textarea>
+                                <button type="submit" class="btn btn-outline-primary post-btn">Post</button>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @if (checkedCommemnt != null)
+                {
+                    <h3 class="mb-8">@post.Comments.Count() Comments</h3>
+                }
+                else
+                {
+                    <h3 class="mb-8">No Comments</h3>
+                }
+                <ul class="comment-list  comment-top">
+                    @foreach (var comment in comments)
+                    {
+                        @if (comment.hidden == true)
+                        {
+                            <li class="comment" style="margin-top: 30px;">
+                                <div class="comment-body">
+                                    <h4>
+                                        <i class="fas fa-user-circle" style="background: linear-gradient(to right, #22c3a9 0%, #fd2d2d 100%); -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;" aria-hidden="true"></i>
+                                        <span style="margin-left: 10px" class="commenter-name">Annonymous</span>
+                                    </h4>
+                                    <div class="comment-date">@comment.CreatedDate.ToString("MMMM d, yyyy hh:mm tt")</div>
+                                    <p style="margin-left: 30px; font-size:20px;" class="comment-message">This comment is hidden</p>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            @if (comment.PostId == post.PostId)
+                            {
+                                <li class="comment" style="margin-top: 30px;">
+                                    <div class="comment-body">
+                                        <h4>
+                                            <i class="fas fa-user-circle" style="background: linear-gradient(to right, #22c3a9 0%, #fd2d2d 100%); -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;" aria-hidden="true"></i>
+                                            <span style="margin-left: 10px" class="commenter-name">@comment.UserAccount.FirstName @comment.UserAccount.LastName</span>
+                                        </h4>
+                                        <div class="comment-date">@comment.CreatedDate.ToString("MMMM d, yyyy hh:mm tt")</div>
+                                        <p style="margin-left: 30px; font-size:20px;" class="comment-message">@comment.Contents</p>
+                                    </div>
+                                    @if (userId != null && comment.UserAccountId == userId)
+                                    {
+                                        <div class="action">
+                                            <a asp-action="Edit" asp-controller="Comments" style="font-size: 20px" class="btn text-primary" asp-route-id="@comment.CommentId"><i class="far fa-edit"></i></a>
+                                            <a asp-action="DeleteComment" asp-controller="Post" asp-route-id="@comment.CommentId" style="font-size: 22px" class="btn text-danger" onclick="return confirm('Are you sure want to delete this comment?')"><i class="fas fa-eraser"></i></a>
+                                        </div>
+                                    }
+                                </li>
+                            }
+                        }
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
